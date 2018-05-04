@@ -116,6 +116,10 @@ class Linked_list:
             temp.set_next(new_node)
         return
 
+
+'''
+# code to check implementation of linked list
+
 lit = Linked_list()
 lit.add(1)
 lit.add(2)
@@ -129,6 +133,7 @@ lit.delete(4)
 lit.insert(7,5)
 print('displaying')
 lit.display()
+'''
 
 # Stack
 
@@ -177,6 +182,8 @@ class Stack:
             self.__top -= 1
             return(popped_data)
 
+'''
+# code to check implementation of stack
 print('stack')
 a = Stack(10)
 a.push(1)
@@ -189,6 +196,7 @@ print(a.pop())
 print(a.get_max_size())
 print(a.is_full())
 print(a.is_empty())
+'''
 
 # Queue
 
@@ -237,6 +245,8 @@ class Queue:
                 temp += 1
         return
 
+'''
+# code to check implementation of queue
 print('Queue')
 a = Queue(5)
 a.enqueue(1)
@@ -249,3 +259,4 @@ print(a.is_full())
 a.enqueue(6)
 a.dequeue()
 a.display()
+'''
