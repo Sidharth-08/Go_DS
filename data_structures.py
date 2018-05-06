@@ -101,6 +101,51 @@ class Linked_list:
             print('Node not in the linked list')
             return
 
+    def swap_nodes(self,data1,data2):
+        temp = self.__head
+        prev1 = None
+        prev2 = None
+        node1 = None
+        node2 = None
+        prev = None
+        while(temp != None):
+            if(temp.get_data() == data1):
+                node1 = temp
+                prev1 = prev
+            elif(temp.get_data() == data2):
+                node2 = temp
+                prev2 = prev
+            if(node1 != None and node2 != None):
+                break
+            prev = temp
+            temp = temp.get_next()
+
+        if(node1 == None or node2 == None):
+            print('Nodes not found')
+            return
+
+        if(prev1 == None and node1 != None and prev2 != None):
+            temp = node1.get_next()
+            node1.set_next(node2.get_next())
+            node2.set_next(temp)
+            self.__head = node2
+            prev2.set_next(node1)
+
+        elif(prev2 == None and node2 != None and prev1 != None):
+            temp = node1.get_next()
+            node1.set_next(node2.get_next())
+            node2.set_next(temp)
+            self.__head = node1
+            prev1.set_next(node2)
+        else:
+            prev1.set_next(node2)
+            prev2.set_next(node1)
+            temp = node1.get_next()
+            node1.set_next(node2.get_next())
+            node2.set_next(temp)
+        self.display()
+        return
+
     def insert(self,data,data_before):
         new_node = Node(data)
         temp = self.__head
@@ -117,7 +162,7 @@ class Linked_list:
         return
 
 
-'''
+
 # code to check implementation of linked list
 
 lit = Linked_list()
@@ -129,11 +174,11 @@ lit.add(5)
 print('head',lit.get_head().get_data())
 print('tail',lit.get_tail().get_data())
 lit.find_node(4)
-lit.delete(4)
 lit.insert(7,5)
 print('displaying')
 lit.display()
-'''
+lit.swap_nodes(2,4)
+
 
 # Stack
 
