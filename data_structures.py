@@ -161,10 +161,18 @@ class Linked_list:
             temp.set_next(new_node)
         return
 
+    def get_mid(self):
+        temp = self.__head
+        slow_node = temp
+        while(temp != None):
+            temp = temp.get_next()
+            temp = temp.get_next()
+            slow_node = slow_node.get_next()
+        print(slow_node.get_data())
 
 
 # code to check implementation of linked list
-'''
+
 lit = Linked_list()
 lit.add(1)
 lit.add(2)
@@ -177,8 +185,8 @@ lit.find_node(4)
 lit.insert(7,5)
 print('displaying')
 lit.display()
-lit.swap_nodes(2,4)
-'''
+lit.get_mid()
+
 
 # Stack
 
