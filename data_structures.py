@@ -170,6 +170,18 @@ class Linked_list:
             slow_node = slow_node.get_next()
         print(slow_node.get_data())
 
+    def print_nth_from_end(self,n):
+        ref_node = self.__head
+        main_node = self.__head
+        i = 0
+        while(i<=n):
+            i+=1
+            ref_node = ref_node.get_next()
+        while(ref_node.get_next() != None):
+            main_node = main_node.get_next()
+            ref_node = ref_node.get_next()
+        print(main_node.get_data())
+        return
 
 # code to check implementation of linked list
 
@@ -185,7 +197,7 @@ lit.find_node(4)
 lit.insert(7,5)
 print('displaying')
 lit.display()
-lit.get_mid()
+lit.print_nth_from_end(3)
 
 
 # Stack
