@@ -164,7 +164,7 @@ class Linked_list:
 
 
 # code to check implementation of linked list
-
+'''
 lit = Linked_list()
 lit.add(1)
 lit.add(2)
@@ -178,7 +178,7 @@ lit.insert(7,5)
 print('displaying')
 lit.display()
 lit.swap_nodes(2,4)
-
+'''
 
 # Stack
 
