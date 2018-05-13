@@ -189,7 +189,9 @@ class Linked_list:
         while(temp != None):
             prev = temp
             temp = temp.get_next()
-            del(prev)
+            #del(prev)
+            prev.set_next(None)
+            prev.set_data(None)
         self.__head = None
         self.__tail = None
         print('Linked list deleted')
