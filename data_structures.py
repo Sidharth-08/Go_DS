@@ -182,9 +182,8 @@ class Linked_list:
             ref_node = ref_node.get_next()
         print(main_node.get_data())
         return
-
-# code to check implementation of linked list
 '''
+# code to check implementation of linked list
 lit = Linked_list()
 lit.add(1)
 lit.add(2)
