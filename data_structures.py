@@ -182,6 +182,19 @@ class Linked_list:
             ref_node = ref_node.get_next()
         print(main_node.get_data())
         return
+
+    def delete_list(self):
+        temp = self.__head
+        prev = None
+        while(temp != None):
+            prev = temp
+            temp = temp.get_next()
+            del(prev)
+        self.__head = None
+        self.__tail = None
+        print('Linked list deleted')
+        return
+
 '''
 # code to check implementation of linked list
 lit = Linked_list()
@@ -197,6 +210,8 @@ lit.insert(7,5)
 print('displaying')
 lit.display()
 lit.print_nth_from_end(3)
+lit.delete_list()
+lit.display()
 '''
 
 # Stack
