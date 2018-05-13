@@ -184,7 +184,7 @@ class Linked_list:
         return
 
 # code to check implementation of linked list
-
+'''
 lit = Linked_list()
 lit.add(1)
 lit.add(2)
