@@ -4,8 +4,8 @@
 Created on Mon Apr 16 05:43:54 2018
 Updated on Wed Apr 25 06:31:00 2018
 Updated on Tue May 01 15:57:00 2018
+Updated on Mon May 14 20:40:00 2018
 @author: sidharthsuman
-
 Data structures in python
 """
 # Linked list
@@ -194,6 +194,15 @@ class Linked_list:
         self.__tail = None
         print('Linked list deleted')
         return
+    def print_reverse_util(self,node):
+        if(node.get_next() == None):
+            return
+        self.print_reverse_util(node.get_next())
+        print(node.get_data())
+        return
+
+    def print_reverse(self):
+        self.print_reverse_util(self.__head)
 
 '''
 # code to check implementation of linked list
@@ -211,7 +220,7 @@ print('displaying')
 lit.display()
 lit.print_nth_from_end(3)
 lit.delete_list()
-lit.display()
+lit.print_reverse()
 '''
 
 # Stack
