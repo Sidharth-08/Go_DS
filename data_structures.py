@@ -204,7 +204,22 @@ class Linked_list:
     def print_reverse(self):
         self.print_reverse_util(self.__head)
 
-'''
+    def alt_split(head):
+        sublist1 = Linked_list()
+        sublist2 = Linked_list()
+        current = head.get_head()
+        while(current != None and current.get_next() != None):
+            sublist1.add(current.get_data())
+            sublist2.add(current.get_next().get_data())
+            current = current.get_next().get_next()
+        if(current != None):
+            sublist1.add(current.get_data())
+            
+        print(sublist1.get_tail().get_data())
+        print(sublist2.get_tail().get_data())
+        return(sublist1,sublist2)
+
+
 # code to check implementation of linked list
 lit = Linked_list()
 lit.add(1)
@@ -214,14 +229,15 @@ lit.add(4)
 lit.add(5)
 print('head',lit.get_head().get_data())
 print('tail',lit.get_tail().get_data())
-lit.find_node(4)
-lit.insert(7,5)
+#lit.find_node(4)
+#lit.insert(7,5)
 print('displaying')
+#lit.print_nth_from_end(3)
+#lit.print_reverse()
+lit.alt_split()
 lit.display()
-lit.print_nth_from_end(3)
 lit.delete_list()
-lit.print_reverse()
-'''
+
 
 # Stack
 
